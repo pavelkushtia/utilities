@@ -15,7 +15,7 @@ std::vector<std::string> GetTokens(std::string str, std::string delimiters) {
     while (token != NULL)
     {
         tokens.push_back(token);
-        token = strtok(NULL, "-");
+        token = strtok(NULL, (char*)delimiters.data());
     }
  
     return tokens;
