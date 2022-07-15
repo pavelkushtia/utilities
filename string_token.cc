@@ -10,7 +10,7 @@ Helper function for string tokenization using a set of delimeters.
 // string. 
 std::vector<std::string> GetTokens(std::string str, std::string delimiters) {
     std::vector<std::string> tokens;
-    char *token = strtok(str.data(), delimiters.data());
+    char *token = strtok((char*)str.data(), (char*)delimiters.data());
  
     while (token != NULL)
     {
